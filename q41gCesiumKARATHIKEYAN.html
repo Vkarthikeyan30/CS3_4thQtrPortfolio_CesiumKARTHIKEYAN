@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q41G Cesium KARATHIKEYAN</title>
+    <title>Q41G Cesium KARTHIKEYAN</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +18,88 @@
             font-size: 16px;
             line-height: 1.5;
         }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 10px;
+            font-size: 24px;
+            gap: 10px;
+            margin-bottom: 20px;
+            color:rgb(253, 220, 30);
+        }
+
+        .wrapper {
+            max-width: 400px;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000000;
+            border-radius: 7px;
+        }
+
+        .wrapper h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .wrapper textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .wrapper .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 10px;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color:rgb(253, 220, 30);
+        }
+
+        .rating .star:hover{
+            transform: scale(15);
+        }
+
+        .rating .star {
+            cursor: pointer;
+        }
+         .rating .star.active {
+            opacity: 0;
+            animation: animate .5s ease-in-out forwards;
+        }
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1, 1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+
     </style>
 </head>
 <body>
@@ -32,9 +115,16 @@
                 <i class = 'bx bx-star'></i>
                 <i class = 'bx bx-star'></i>
             </div>
+                <textarea name="title" class="Title" placeholder="Title" cols="30" rows="5"></textarea>
+                <textarea name="year" class="Year" placeholder="Year" cols="30" rows="5"></textarea>
+                <textarea name="genre" class="Genre" placeholder="Genre" cols="30" rows="5"></textarea>
+                <div class="buttons">
+                    <button type="submit" class="button submit">Submit</button>
+                    <button type="cancel" class="button cancel">Cancel</button>
+                </div>
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scriptq41.js"></script>
 </body>
 </html>
