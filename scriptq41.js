@@ -1,3 +1,6 @@
+//star rating code
+// erm ma'am i couldn't test po if the star code works because i think i did something wrong po with the css styling
+
 const rateStars = document.querySelectorAll('.rating .star')
 
 rateStars.forEach((item, idx) => {
@@ -20,4 +23,29 @@ rateStars.forEach((item, idx) => {
 
 })
 
+})
+
+//local storage
+
+const form = document.getElementById('RatingForm')
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
+    const title = document.querySelector(".Title")
+    const year = document.querySelector(".Year")
+    const genre = document.querySelector(".Genre")
+    const rating = document.querySelector(".rating input[name='rating']")
+
+    const movie = {
+        title: title.value,
+        year: year.value,
+        genre: genre.value,
+        rating: rating.value
+    }
+
+    let movies = JSON.parse(localStorage.getItem('movies')) || []
+    movies.push(movie)
+    localStorage.setItem('movies', JSON.stringify(movies))
+
+    form.reset()
 })
