@@ -5,9 +5,10 @@ const rateStars = document.querySelectorAll('.rating .star')
 
 rateStars.forEach((item, idx) => {
     item.addEventListener('click', function () {
+        document.querySelector('.rating input[name="rating"]').value = idx + 1
         let click = 0
 
-        allStar.forEach(i=> {
+        rateStars.forEach(i=> {
             i.classList.replace('bxs-star', 'bx-star')
             i.rateStars[i].classList.remove('active')
         })
