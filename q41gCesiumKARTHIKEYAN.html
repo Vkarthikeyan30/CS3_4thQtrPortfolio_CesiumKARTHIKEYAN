@@ -116,24 +116,37 @@
         <h3>Lorem ipsum</h3>
         <form id="RatingForm" action="#">
             <div class="rating">
-                <input type="number" name="rating" hidden>
-                <i class = 'bx bx-star'></i>
-                <i class = 'bx bx-star'></i>
-                <i class = 'bx bx-star'></i>
-                <i class = 'bx bx-star'></i>
-                <i class = 'bx bx-star'></i>
+                <input type="number" name="rating" value="0">
+                <i class = 'bx bx-star star'></i>
+                <i class = 'bx bx-star star'></i>
+                <i class = 'bx bx-star star'></i>
+                <i class = 'bx bx-star star'></i>
+                <i class = 'bx bx-star star'></i>
             </div>
                 <textarea name="title" class="Title" placeholder="Title" cols="30" rows="5"></textarea>
                 <textarea name="year" class="Year" placeholder="Year" cols="30" rows="5"></textarea>
-                <textarea name="genre" class="Genre" placeholder="Genre" cols="30" rows="5"></textarea>
+            <select class="Genre" required>
+                    <option value="">Select Genre</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Fantasy">Fantasy</option>
+            </select>
+                
                 <div class="buttons">
                     <button type="submit" class="button submit">Submit</button>
-                    <button type="cancel" class="button cancel">Cancel</button>
+                    <button type="cancel" class="button cancel" id="clearBtn">Cancel</button>
                 </div>
         </form>
     </div>
 
+<div id="movieList" class="movie-list"></div>
+
     <script src="scriptq41.js"></script>
 
+    
 </body>
 </html>
