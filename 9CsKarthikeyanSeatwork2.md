@@ -26,7 +26,10 @@ Step 3: When an element has position: absolute, it is positioned relative to the
 Step 4: I think "notice" appeared at the top of the page because the nearest box with a non-static position, in this case content with an absolute position, was also at the top of the page.  When the z-indexes are switched, the "notice" text is not visible anymore, and the orange box is also smaller in length.
 
 Reflection Questions:
-a.
-b.
-c.
-d.
+a. Static - It is the default behavior of html elements.  They flow according to the html file itself, making it easily readable, and are unaffected by css positions like top/bottom/right/left/etc.
+Relative - Keeps the element relative to its original position while still allowing you to move it while preserving the original layout of the element
+Absolute - Keeps the element relative to the nearest non-static positioned element
+Fixed - Keeps the element in a fixed position, unchanging
+b. When an element is given css position values like top, left, etc; It is positioned relative to the nearest element with a non-static value.  For example, a child element that was 60px from the top/bottom/left/right would be positioned relative to their parent element 60px away from it.
+c. Sticky depends on the user's scroll position.  It can behave like a relative element for a while, but when it reaches a certain point, it will behave like a fixed element.
+d. To highlight important information, I would make sure that important things a general description of the event would be positioned in the center of the webpage.  Schedules could be positioned relative to a specific day of the event, etc.  I would try to make it similar to a mind map so that the things in the website are all easy to find based on a branch of topics.
