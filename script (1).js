@@ -1,7 +1,9 @@
+/* fixed the function to old points first */
 function plotPoint(x0, y0, x, y) {
     console.log(x0, y0, x, y) // checks the arguments passed to this function
     in1.innerHTML = x0 + " " + y0 + " " + x + " " + y;
 
+    /* remove old points */
     var oldPoint = document.querySelector('.point');
     if (oldPoint) {
       oldPoint.remove();
